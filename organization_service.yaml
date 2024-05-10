@@ -4,7 +4,8 @@ example:
 
 spring:
   jpa:
-    hibernate.ddl-auto: true
+    hibernate:
+      ddl-auto: true
     database: POSTGRESQL
 
 eureka:
