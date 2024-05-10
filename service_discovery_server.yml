@@ -7,7 +7,7 @@ eureka:
     registerWithEureka: false
     fetchRegister: false
     serviceUrl:
-      defaultZone: http://{eureka.instance.hostname}:{server.port}/eureka/
+      defaultZone: http://localhost:8070/eureka/
   server:
     # this is like a wait time, before the server takes any requests
     # The default is 5 minutes (because it needs to test all of the registered servers, before accepting any requests)
