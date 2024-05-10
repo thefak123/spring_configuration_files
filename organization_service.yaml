@@ -1,0 +1,16 @@
+example:
+  property: I AM THE DEV
+
+
+spring:
+  jpa:
+    hibernate.ddl-auto: true
+    database: POSTGRESQL
+
+eureka:
+   instance:
+      preferIpAddress: true
+   client:
+      registerWithEureka: true # Tells spring to register this project/service to eureka (to specified url)
+      fetchRegistry: true # cache the request (so that it won't request to eureka, if the cache information is available). It will refresh the cache every 30 seconds
+      serviceUrl: defaultZone: http://localhost:8070/eureka/
