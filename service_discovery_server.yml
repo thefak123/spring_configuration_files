@@ -1,0 +1,16 @@
+server:
+  port: 8070
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegister: false
+    serviceUrl:
+      defaultZone: http://{eureka.instance.hostname}:{server.port}/eureka/
+  server:
+    # this is like a wait time, before the server takes any requests
+    # The default is 5 minutes (because it needs to test all of the registered servers, before accepting any requests)
+    # Because all of the servers in the local (it's much faster), then we specify it to 5 milliseconds
+    # Individual services usually takes 30 seconds to register its service into eureka server
+    waitTimeInMsWhenSyncEmpty: 5 
