@@ -1,0 +1,12 @@
+example:
+  property: I AM DEV
+
+# DataSource settings: set here your own configurations for the database 
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/license_db 
+    username: postgres
+    # {cipher} is just must have string to tell to spring that its is dealing with encrypted value
+    # 9769723138a337edec3a0a857f7e00a1f9e38dddace2e2b2b47fbbfa124b4335 -> is encrypted value
+    # you can encrypt it by using http://localhost/8071 with POST Method (the data is json and the value that you need to enrypt)
+    password: {cipher}9769723138a337edec3a0a857f7e00a1f9e38dddace2e2b2b47fbbfa124b4335
