@@ -3,6 +3,22 @@ example:
 
 
 spring:
+  security:
+     oauth2:
+       resourceserver:
+           jwt: 
+             issuer-uri: http://localhost:9999/realms/microservices_authorization_server
+       client:
+          registration:
+             keycloak:
+                 client-id: microservices_authorization_server
+                 authorization-grant-type: authorization_code
+                 scope: openid
+          provider:
+             keycloak:
+                issuer-uri: http://localhost:9999/realms/microservices_authorization_server
+                user-name-attribute: admin
+              
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,15 +33,5 @@ eureka:
       serviceUrl: 
         defaultZone: http://localhost:8070/eureka/
 
-keycloak:
-  # Specify the realm
-  realm: microservice_authorization_server
-  # The auth endpoint for keycloak
-  auth-server-url: http://localhost:9999/auth
-  # Client id
-  resource: microservices_authorization_server	
-  # Credentials from client id
-  credentials:
-    secret: daxV01UoObJY44mGyeNYhfkzOUHanjCh
-  use-resource-role-mappings: true
-  bearer-only: true
+
+ 
