@@ -8,6 +8,7 @@ spring:
        resourceserver:
            jwt: 
              issuer-uri: http://localhost:9999/realms/microservice_authorization_server
+             jwk-set-uri: http://localhost:9999/realms/microservice_authorization_server/protocol/openid-connect/certs
        client:
           registration:
              keycloak:
@@ -18,6 +19,8 @@ spring:
              keycloak:
                 issuer-uri: http://localhost:9999/realms/microservice_authorization_server
                 user-name-attribute: username
+                
+
               
   jpa:
     hibernate:
