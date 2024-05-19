@@ -17,7 +17,7 @@ spring:
           provider:
              keycloak:
                 issuer-uri: http://localhost:9999/realms/microservices_authorization_server
-                user-name-attribute: admin
+                user-name-attribute: username
               
   jpa:
     hibernate:
