@@ -18,9 +18,13 @@ eureka:
         defaultZone: http://localhost:8070/eureka/
 
 keycloak:
+  # Specify the realm
   realm: microservice_authorization_server
+  # The auth endpoint for keycloak
   auth-server-url: http://localhost:9999/auth
+  # Client id
   resource: microservices_authorization_server	
+  # Credentials from client id
   credentials:
     secret: daxV01UoObJY44mGyeNYhfkzOUHanjCh
   use-resource-role-mappings: true
