@@ -7,7 +7,7 @@ spring:
      oauth2:
        resourceserver:
            jwt: 
-             issuer-uri: http://localhost:9999/realms/microservices_authorization_server
+             issuer-uri: http://localhost:9999/realms/microservice_authorization_server
        client:
           registration:
              keycloak:
@@ -16,7 +16,7 @@ spring:
                  scope: openid
           provider:
              keycloak:
-                issuer-uri: http://localhost:9999/realms/microservices_authorization_server
+                issuer-uri: http://localhost:9999/realms/microservice_authorization_server
                 user-name-attribute: username
               
   jpa:
