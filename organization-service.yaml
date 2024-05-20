@@ -7,6 +7,8 @@ spring:
      oauth2:
        resourceserver:
            jwt: 
+             # issuer-uri -> where the authorization server located, fetch the configurations, and verify the token
+             # jwk-set-uri -> get the public key
              issuer-uri: http://localhost:9999/realms/microservice_authorization_server
              jwk-set-uri: http://localhost:9999/realms/microservice_authorization_server/protocol/openid-connect/certs
        client:
