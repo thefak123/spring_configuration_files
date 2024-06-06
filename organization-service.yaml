@@ -3,8 +3,6 @@ example:
 
 
 spring:
-  kafka:
-    bootstrap-server: localhost:9092
   security:
      oauth2:
        resourceserver:
